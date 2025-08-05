@@ -9,7 +9,8 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
 
 
     <title>Tuti Gourmet</title>
@@ -18,7 +19,7 @@
       GitHub: https://github.com/bnocrv
       Contato: bnocrv@proton.me
       Criação: 30/07/2025
-      Última Atualização: 04/08/2025
+      Última Atualização: 05/08/2025
       Licença: MIT
       Versão 1.0
     -->
@@ -26,7 +27,6 @@
     <!-- ARQUIVOS CSS EXTERNOS
          - Bootstrap: grid e componentes prontos
          - Font Awesome: ícones
-         - templatemo-lava.css: tema do site
          - owl-carousel.css: estilos do carrossel de imagens -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
@@ -172,37 +172,49 @@
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>Momentos doces começam <em>aqui!</em></h1>
-                        <p>Feitos com ingredientes selecionados e um toque de carinho, nossos doces são mais do que
+
+                        <!-- Título com fonte Cookie -->
+                        <h1 style="font-family: 'Cookie', cursive; font-size: 3rem; color: #000000;">
+                            Momentos doces começam <em>aqui!</em>
+                        </h1>
+
+                        <!-- Parágrafo com Quicksand -->
+                        <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">
+                            Feitos com ingredientes selecionados e um toque de carinho, nossos doces são mais do que
                             sobremesas — são experiências afetivas. Aqui, cada detalhe importa: das receitas artesanais
                             ao cuidado na apresentação, tudo é pensado para despertar memórias e encantar os sentidos.
                             Seja para celebrar um momento especial ou adoçar o seu dia, você sempre encontra um motivo
-                            para voltar. </p>
-                        <br>
+                            para voltar.
+                            <br>
+                        </p>
 
                     </div>
                 </div>
             </div>
-            <!-- TEXTO PRINCIPAL — FIM -->
         </div>
-        <!-- SEÇÃO DE BOAS-VINDAS — FIM -->
+
+
+
 
         <!-- TÍTULO DA SEÇÃO DE CARDÁPIO (ESTILIZADO INLINE PARA ESTE PROJETO) -->
         <h1 style="
-    font-size: 36px;
+    font-family: 'Cookie', cursive;
+    font-size: 46px;
     font-weight: 700;
     line-height: 72px;
     letter-spacing: -1px;
-    margin-bottom: 0px;
+    margin-bottom: -60px;
     text-align: center;
     margin-left: 0;
-    class="col-lg-8 offset-lg-2" style="margin-top: 0; padding-top: 0;
-  ">
+    margin-top: 0;
+    padding-top: 0;
+">
             Nosso <span style="color: #E56C8C; font-style: normal;">Cardápio</span>
         </h1>
 
 
-     
+
 
 
 
@@ -212,17 +224,23 @@
         <section class="section" id="about" style="margin-bottom: 0; padding-bottom: 0;">
             <div class="container">
                 <div class="row">
+
+                    <!-- 1 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-1.png" alt="">
-                                <h4>Bombom de Morango | Uva R$11</h4>
-                                <p>Pedaços de morango ou uva, uma camada de recheio cremoso de leite ninho, finalizada
-                                    com uma
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Bombom de Uva<br>
+                                    R$11
+                                </h4>
+                                    <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Uma camada de uvas, uma camada de recheio cremoso de leite ninho, finalizada
+                                    com nossa
                                     deliciosa ganache de chocolate ao leite.</p>
-                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom de Morango | Uva"
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom de Uva"
                                     data-price="11" data-id="1">
                                     Adicionar ao carrinho
                                 </a>
@@ -231,6 +249,8 @@
                         </div>
 
 
+
+                        <!-- 2 -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
@@ -238,8 +258,12 @@
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-2.png" alt="">
-                                <h4>Escondidinho de Brownie R$10</h4>
-                                <p>Camadas de brownie molhadinho, creme de ninho, brigadeiro cremoso e finalizado com
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Escondidinho de Brownie<br>
+                                    R$10
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Camadas de brownie molhadinho, creme de ninho, brigadeiro cremoso e finalizado com
                                     confeito de chocolate nobre.</p>
                                 <a href="#" class="add-to-cart-btn main-button" data-name="Escondidinho de Brownie"
                                     data-price="10" data-id="2">
@@ -249,14 +273,21 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- 3 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-3.png" alt="">
-                                <h4>Morango do Amor R$15</h4>
-                                <p>Morango selecionado e graúdo envolvido por um delicioso e equilibrado brigadeiro de
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Morango do Amor<br>
+                                    R$15
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Morango selecionado e graúdo envolvido por um delicioso e equilibrado brigadeiro de
                                     ninho, finalizado em uma calda de açucar fininha e crocante.</p>
                                 <a href="#" class="add-to-cart-btn main-button" data-name="Morango do Amor"
                                     data-price="15" data-id="3">
@@ -265,53 +296,82 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- 4 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-4.png" alt="">
-                                <h4>Banoffe R$12</h4>
-                                <p>Uma deliciosa camada de biscoito assada, bananas, nosso saboroso recheio de doce de
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Banoffe<br>
+                                    R$12
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Uma deliciosa camada de biscoito assada, bananas, nosso saboroso recheio de doce de
                                     leite, finalizado com a combinação de chantininho e canela.</p>
                                 <a href="#" class="add-to-cart-btn main-button" data-name="Banoffe" data-price="12"
                                     data-id="4">
                                     Adicionar ao carrinho
                                 </a>
+
                             </div>
                         </div>
+
+
                     </div>
 
+
+
+
+                    <!-- 5 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-5.png" alt="">
-                                <h4>Pavê Duplo de Ninho com Morango R$14</h4>
-                                <p>Camadas de mousse de ninho, recheio de leite, biscoito maizena e finalizado com
-                                    morangos
-                                    frescos.</p>
-                                <a href="#" class="add-to-cart-btn main-button"
-                                    data-name="Pavê Duplo de Ninho com Morango" data-price="14" data-id="5">
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Pavê Duo<br>
+                                    R$14
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Camadas de brigadeiro cremoso, ninho cremoso, biscoito maizena e finalizado com
+                                    confeito de chocolate nobre.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Pavê Duo" data-price="14"
+                                    data-id="5">
                                     Adicionar ao carrinho
+                                </a>
                                 </a>
                             </div>
                         </div>
                     </div>
 
+
+
+
+
+
+
+                    <!-- 6 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/features-icon-6.png" alt="">
-                                <h4>Bombom Recheado | Trufa R$4</h4>
-                                <p>Bombom com casca de chocolate ao leite, opções de recheio disponível: Brigadeiro,
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Bombom | Trufa<br>
+                                    R$4
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Bombom com casca de chocolate ao leite, opções de recheio disponível: Brigadeiro,
                                     Ninho
-                                    com Geléia de Morango ou Ninho com Nutella.</p>
-                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom Recheado | Trufa"
-                                    data-price="4" data-id="6">
+                                    com Geléia de Morango ou Ninho com Nutella.</p> <a href="#"
+                                    class="add-to-cart-btn main-button" data-name="Bombom | Trufa" data-price="4"
+                                    data-id="6">
                                     Adicionar ao carrinho
                                 </a>
                             </div>
@@ -319,14 +379,106 @@
                     </div>
 
 
+
+
+
+
+                    <!-- 7 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-7.png" alt="">
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Bombom de Morango<br>
+                                    R$11
+                                </h4>
+                                    <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">edaços de morango, uma camada de recheio cremoso de leite ninho, finalizada
+                                    com uma
+                                    deliciosa ganache de chocolate ao leite.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom de Morango"
+                                    data-price="11" data-id="7">
+                                    Adicionar ao carrinho
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                    <!-- 8 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-8.png" alt="">
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Pavê Duplo de Ninho com Morango<br>
+                                    R$14
+                                </h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Camadas de mousse de ninho, recheio de leite ninho, biscoito maizena e finalizado
+                                    com morangos frescos.</p>
+                                <a href="#" class="add-to-cart-btn main-button"
+                                    data-name="Pavê Duplo de Ninho com Morango" data-price="14" data-id="8">
+                                    Adicionar ao carrinho
+                                </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- 9 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-9.png" alt="">
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">
+                                    Tortinha de Limão<br>
+                                    R$9
+                                </h4>
+                                    <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Uma deliciosa camada de biscoito assada, um refrescante e cremoso mousse de limão, finalizado com chantininho e raspas de limão.</p> <a href="#"
+                                    class="add-to-cart-btn main-button" data-name="Tortinha de Limão" data-price="9"
+                                    data-id="9">
+                                    Adicionar ao carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- 10 -->
+                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/bolo-1.png" alt="">
-                                <h4>Bolo de Churros</h4>
-                                <p> Massa fofinha com um delicado toque de canela,
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">Bolo de Churros</h4>
+                                    <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;"> Massa fofinha com um delicado toque de canela,
                                     recheada com doce de leite cremoso e finalizada com uma cobertura levemente
                                     açucarada. O
                                     sabor do churros que você ama, agora em uma versão ainda mais irresistível.</p>
@@ -349,16 +501,17 @@
                     </div>
 
 
-
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+<!-- 11 -->
+ <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                  
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/bolo-2.png" alt="">
-                                <h4>Crocante | Chocolatudo</h4>
-                                <p>Dois clássicos, uma imagem de puro sabor: o bolo de doce de leite com crocante de
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">Crocante | Chocolatudo</h4>
+                                    <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Dois clássicos, uma imagem de puro sabor: o bolo de doce de leite com crocante de
                                     amendoim brilha na frente, enquanto o chocolatudo rouba a cena ao fundo com sua
                                     cobertura intensa. Um combo que conquista olhos e paladar.
 
@@ -382,15 +535,17 @@
 
 
 
-
+ <!-- 12 -->
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                  
                         <div class="features-item">
                             <div class="features-icon">
                                 <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
                                 <img src="assets/images/bolo-3.png" alt="">
-                                <h4>Bolo de Limão</h4>
-                                <p>Nosso bolo de limão tem uma massa macia com um toque cítrico perfeito, recheio
+                                <h4 style="font-family: 'Cookie', cursive; font-size: 38px; margin-bottom: 10px;">Bolo de Limão</h4>
+                                     <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Nosso bolo de limão tem uma massa macia com um toque cítrico perfeito, recheio
                                     cremoso e cobertura suave com raspas de limão fresco. Ideal para quem busca um doce
                                     com sabor marcante e delicadeza no ponto certo.
 
@@ -427,6 +582,11 @@
         </div>
 
 
+               <div class="left-image-decor-copia"></div>
+        <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
+            data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+        </div>
+
 
 
 
@@ -434,7 +594,7 @@
 
         <div class="right-image-decor"></div>
 
-       <div class="left-image-decor-copia"></div>
+        <div class="left-image-decor-copia"></div>
 
 
 
@@ -445,23 +605,35 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="center-heading">
-                            <h1 style="
-    font-size: 36px;
+                               <h1 style="
+    font-family: 'Cookie', cursive;
+    font-size: 46px;
     font-weight: 700;
     line-height: 72px;
     letter-spacing: -1px;
+    margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
     margin-left: 0;
+    padding-top: 0;
 ">
-                                Quem <span style="color: #E56C8C; font-style: normal;">Somos</span>
-                            </h1>
+    Quem <span style="color: #E56C8C; font-style: normal;">Somos</span>
+</h1>
 
-                            <img src="assets/images/foto-nossa-historia.png" alt="Foto da Nossa História"
-                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
 
-                            <p><br> Tudo começou com um sonho: o desejo de criar doces artesanais feitos com amor.
-                                Muito antes de se tornar realidade, esse sonho já fazia parte da minha vida.<br /><br />
+
+
+  <img
+    class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s"
+    src="assets/images/foto-nossa-historia.png"
+    alt="Foto da Nossa História"
+    style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+
+
+                             <p
+                            style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #222;">Tudo começou com um sonho: o desejo de criar doces artesanais feitos com amor.
+                                Muito antes de se tornar realidade, esse sonho já fazia parte da minha vida.
 
                                 Me chamo <strong>Letícia Carvalho</strong>, e ao lado do meu esposo
                                 <strong>Romário</strong>, transformamos esse sonho em um projeto de vida:
@@ -492,10 +664,19 @@
 
                         <!-- FORMULÁRIO/CONTEÚDO DO LADO DIREITO DO RODAPÉ -->
                         <div class="right-content col-lg-6 col-md-12 col-sm-12">
-                            <h2><em style="color: black;">Siga Nossas <em style="color: #ffffff;">Redes</em>
-                            </h2>
+                            <h2>
+  <em style="font-family: 'Cookie', cursive; font-size: 3rem; color: black;">
+    Siga Nossas
+  </em>
+  <em style="font-family: 'Cookie', cursive; font-size: 3rem; color: #ffffff;">
+    Redes
+  </em>
+</h2>
 
-                            <p>Siga-nos e embarque em uma jornada de sabores feitos com todo o carinho. Aqui, cada pedacinho carrega um toque de amor, preparado especialmente para você!
+
+                          
+                            <p>Siga-nos e embarque em uma jornada de sabores feitos com todo o carinho. Aqui, cada
+                                pedacinho carrega um toque de amor, preparado especialmente para você!
                             </p>
                             <ul class="social">
 
@@ -547,100 +728,100 @@
 </html>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const cartToggleBtn = document.getElementById('cart-toggle');
-    const cart = document.getElementById('cart');
-    const cartHeader = document.getElementById('cart-header');
-    const cartItemsWrapper = document.getElementById('cart-items-wrapper');
-    const cartItemsContainer = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const finalizeBtn = document.getElementById('finalize-btn');
-    const cartCount = document.getElementById('cart-count');
+    document.addEventListener('DOMContentLoaded', function () {
+        const cartToggleBtn = document.getElementById('cart-toggle');
+        const cart = document.getElementById('cart');
+        const cartHeader = document.getElementById('cart-header');
+        const cartItemsWrapper = document.getElementById('cart-items-wrapper');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const finalizeBtn = document.getElementById('finalize-btn');
+        const cartCount = document.getElementById('cart-count');
 
-    let cartItems = {};
-    let isMinimized = false;
-    let lastScrollY = window.scrollY;
-    const MINIMIZE_THRESHOLD = 10;
+        let cartItems = {};
+        let isMinimized = false;
+        let lastScrollY = window.scrollY;
+        const MINIMIZE_THRESHOLD = 10;
 
-    function minimizeCart() {
-        if (Object.keys(cartItems).length === 0) return;
+        function minimizeCart() {
+            if (Object.keys(cartItems).length === 0) return;
 
-        cart.style.transition = 'all 0.3s ease';
-        cart.style.maxHeight = '46px';
-        cart.style.width = '100px';
-        cart.style.overflow = 'hidden';
+            cart.style.transition = 'all 0.3s ease';
+            cart.style.maxHeight = '46px';
+            cart.style.width = '100px';
+            cart.style.overflow = 'hidden';
 
-        cartHeader.style.cursor = 'pointer';
-        cartHeader.style.fontSize = '14px';
-        cartHeader.style.padding = '8px 12px';
-        cartHeader.style.transition = 'all 0.3s ease';
+            cartHeader.style.cursor = 'pointer';
+            cartHeader.style.fontSize = '14px';
+            cartHeader.style.padding = '8px 12px';
+            cartHeader.style.transition = 'all 0.3s ease';
 
-        cartHeader.style.display = 'flex';
-        cartHeader.style.alignItems = 'center';
-        cartHeader.style.justifyContent = 'center';
-        cartHeader.style.textAlign = 'center';
-        cartHeader.innerHTML = 'Carrinho';
+            cartHeader.style.display = 'flex';
+            cartHeader.style.alignItems = 'center';
+            cartHeader.style.justifyContent = 'center';
+            cartHeader.style.textAlign = 'center';
+            cartHeader.innerHTML = 'Carrinho';
 
-        isMinimized = true;
-    }
-
-    function expandCart() {
-        cart.style.transition = 'all 0.3s ease';
-        cart.style.maxHeight = '400px';
-        cart.style.width = '300px';
-        cart.style.overflow = 'auto';
-
-        cartHeader.style.cursor = 'default';
-        cartHeader.style.fontSize = '18px';
-        cartHeader.style.padding = '15px 20px';
-        cartHeader.style.transition = 'all 0.3s ease';
-
-        cartHeader.innerHTML = 'Carrinho';
-
-        isMinimized = false;
-    }
-
-    function showCart() {
-        cart.style.display = 'block';
-        expandCart();
-    }
-
-    function hideCart() {
-        cart.style.display = 'none';
-    }
-
-    cartToggleBtn.addEventListener('click', () => {
-        if (cart.style.display === 'none' || cart.style.display === '') {
-            showCart();
-        } else {
-            if (isMinimized) {
-                expandCart();
-            } else {
-                hideCart();
-            }
+            isMinimized = true;
         }
-    });
 
-    cartHeader.addEventListener('click', () => {
-        if (isMinimized) {
+        function expandCart() {
+            cart.style.transition = 'all 0.3s ease';
+            cart.style.maxHeight = '400px';
+            cart.style.width = '300px';
+            cart.style.overflow = 'auto';
+
+            cartHeader.style.cursor = 'default';
+            cartHeader.style.fontSize = '18px';
+            cartHeader.style.padding = '15px 20px';
+            cartHeader.style.transition = 'all 0.3s ease';
+
+            cartHeader.innerHTML = 'Carrinho';
+
+            isMinimized = false;
+        }
+
+        function showCart() {
+            cart.style.display = 'block';
             expandCart();
         }
-    });
 
-    function updateCartUI() {
-        cartItemsContainer.innerHTML = '';
+        function hideCart() {
+            cart.style.display = 'none';
+        }
 
-        let total = 0;
-        let totalQuantity = 0;
+        cartToggleBtn.addEventListener('click', () => {
+            if (cart.style.display === 'none' || cart.style.display === '') {
+                showCart();
+            } else {
+                if (isMinimized) {
+                    expandCart();
+                } else {
+                    hideCart();
+                }
+            }
+        });
 
-        for (const id in cartItems) {
-            const item = cartItems[id];
-            total += item.price * item.quantity;
-            totalQuantity += item.quantity;
+        cartHeader.addEventListener('click', () => {
+            if (isMinimized) {
+                expandCart();
+            }
+        });
 
-            const li = document.createElement('li');
-            li.style.marginBottom = '10px';
-            li.innerHTML = `
+        function updateCartUI() {
+            cartItemsContainer.innerHTML = '';
+
+            let total = 0;
+            let totalQuantity = 0;
+
+            for (const id in cartItems) {
+                const item = cartItems[id];
+                total += item.price * item.quantity;
+                totalQuantity += item.quantity;
+
+                const li = document.createElement('li');
+                li.style.marginBottom = '10px';
+                li.innerHTML = `
                 <div><strong>${item.name}</strong> - R$${item.price.toFixed(2)}</div>
                 <div>
                     Quantidade:
@@ -655,105 +836,105 @@ document.addEventListener('DOMContentLoaded', function () {
                     <button data-id="${id}" class="remove-item" style="margin-left:10px; color: #E56C8C; cursor:pointer;">X</button>
                 </div>
             `;
-            cartItemsContainer.appendChild(li);
+                cartItemsContainer.appendChild(li);
+            }
+
+            cartTotal.textContent = `Total: R$${total.toFixed(2)}`;
+            cartCount.textContent = totalQuantity;
+            cartCount.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+
+            if (totalQuantity === 0) {
+                hideCart();
+            }
         }
 
-        cartTotal.textContent = `Total: R$${total.toFixed(2)}`;
-        cartCount.textContent = totalQuantity;
-        cartCount.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
-
-        if (totalQuantity === 0) {
-            hideCart();
-        }
-    }
-
-    function addToCart(id, name, price) {
-        if (cartItems[id]) {
-            cartItems[id].quantity++;
-        } else {
-            cartItems[id] = { name, price, quantity: 1 };
-        }
-        updateCartUI();
-        showCart();
-    }
-
-    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const id = button.dataset.id;
-            const name = button.dataset.name;
-            const price = parseFloat(button.dataset.price);
-            addToCart(id, name, price);
-        });
-    });
-
-    // Atualiza a quantidade no objeto enquanto digita, sem redesenhar para evitar erro no celular
-    function handleQuantityInput(e) {
-        if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
-            const id = e.target.dataset.id;
-            let quantity = parseInt(e.target.value, 10);
-            if (isNaN(quantity) || quantity < 1) quantity = 1;
+        function addToCart(id, name, price) {
             if (cartItems[id]) {
-                cartItems[id].quantity = quantity;
-                // NÃO chama updateCartUI aqui para evitar perda de foco
+                cartItems[id].quantity++;
+            } else {
+                cartItems[id] = { name, price, quantity: 1 };
             }
-        }
-    }
-
-    // Quando terminar a edição (change), atualiza a interface do carrinho
-    function handleQuantityChange(e) {
-        if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
             updateCartUI();
-        }
-    }
-
-    cartItemsContainer.addEventListener('input', handleQuantityInput);
-    cartItemsContainer.addEventListener('change', handleQuantityChange);
-
-    cartItemsContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('remove-item')) {
-            const id = e.target.dataset.id;
-            delete cartItems[id];
-            updateCartUI();
-        }
-    });
-
-    finalizeBtn.addEventListener('click', () => {
-        if (Object.keys(cartItems).length === 0) {
-            alert('Seu carrinho está vazio!');
-            return;
+            showCart();
         }
 
-        let message = 'Olá, gostaria de fazer o pedido:\n';
-        for (const id in cartItems) {
-            const item = cartItems[id];
-            message += `- ${item.name} x${item.quantity} = R$${(item.price * item.quantity).toFixed(2)}\n`;
-        }
-        const total = Object.values(cartItems).reduce((sum, item) => sum + item.price * item.quantity, 0);
-        message += `Total: R$${total.toFixed(2)}`;
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = button.dataset.id;
+                const name = button.dataset.name;
+                const price = parseFloat(button.dataset.price);
+                addToCart(id, name, price);
+            });
+        });
 
-        const phoneNumber = '5521997847199';
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
-    });
-
-    window.addEventListener('scroll', () => {
-        const currentY = window.scrollY;
-        const delta = currentY - lastScrollY;
-
-        const cartVisible = cart.style.display === 'block';
-        const hasItems = Object.keys(cartItems).length > 0;
-
-        if (cartVisible && hasItems) {
-            if (Math.abs(delta) > MINIMIZE_THRESHOLD) {
-                minimizeCart();
+        // Atualiza a quantidade no objeto enquanto digita, sem redesenhar para evitar erro no celular
+        function handleQuantityInput(e) {
+            if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
+                const id = e.target.dataset.id;
+                let quantity = parseInt(e.target.value, 10);
+                if (isNaN(quantity) || quantity < 1) quantity = 1;
+                if (cartItems[id]) {
+                    cartItems[id].quantity = quantity;
+                    // NÃO chama updateCartUI aqui para evitar perda de foco
+                }
             }
         }
 
-        lastScrollY = currentY;
-    });
+        // Quando terminar a edição (change), atualiza a interface do carrinho
+        function handleQuantityChange(e) {
+            if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
+                updateCartUI();
+            }
+        }
 
-    updateCartUI();
-    cart.style.maxHeight = '400px';
-});
+        cartItemsContainer.addEventListener('input', handleQuantityInput);
+        cartItemsContainer.addEventListener('change', handleQuantityChange);
+
+        cartItemsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-item')) {
+                const id = e.target.dataset.id;
+                delete cartItems[id];
+                updateCartUI();
+            }
+        });
+
+        finalizeBtn.addEventListener('click', () => {
+            if (Object.keys(cartItems).length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
+
+            let message = 'Olá, gostaria de fazer o pedido:\n';
+            for (const id in cartItems) {
+                const item = cartItems[id];
+                message += `- ${item.name} x${item.quantity} = R$${(item.price * item.quantity).toFixed(2)}\n`;
+            }
+            const total = Object.values(cartItems).reduce((sum, item) => sum + item.price * item.quantity, 0);
+            message += `Total: R$${total.toFixed(2)}`;
+
+            const phoneNumber = '5521997847199';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        });
+
+        window.addEventListener('scroll', () => {
+            const currentY = window.scrollY;
+            const delta = currentY - lastScrollY;
+
+            const cartVisible = cart.style.display === 'block';
+            const hasItems = Object.keys(cartItems).length > 0;
+
+            if (cartVisible && hasItems) {
+                if (Math.abs(delta) > MINIMIZE_THRESHOLD) {
+                    minimizeCart();
+                }
+            }
+
+            lastScrollY = currentY;
+        });
+
+        updateCartUI();
+        cart.style.maxHeight = '400px';
+    });
 </script>

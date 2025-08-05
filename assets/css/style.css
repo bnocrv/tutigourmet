@@ -768,18 +768,20 @@ button.main-button:hover {
 .left-image-decor {
   background-image: url(../images/left-bg-decor.png);
   background-repeat: no-repeat;
-  background-size: contain; /* Faz a imagem caber inteira dentro do box */
+  background-size: contain;
 
   position: absolute;
   width: 100%;
+  height: 1000px;
 
-  height: 1000px; /* Ajuste esse valor para a altura real da sua imagem ou maior */
-  
-  top: 0; /* Começa no topo do container, ajuste para descer (ex: 20px, 50px) */
+  top: 250%; /* Posição inicial: meio da tela */
   left: 0;
 
-  margin: 0; /* Zera qualquer margem que possa atrapalhar */
+  transform: translateY(-50%); /* Move o elemento metade da sua altura pra cima */
+  margin: 0;
+  pointer-events: none; /* (opcional) evita que ele atrapalhe cliques */
 }
+
 
 
 
