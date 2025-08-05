@@ -1270,4 +1270,30 @@ footer .sub-footer {
   padding-bottom: 0px !important;
 }
 
+/* Afeta apenas os cards dentro da seção de produtos */
+.features-section .row > .col-lg-4,
+.features-section .row > .col-md-6,
+.features-section .row > .col-sm-12,
+.features-section .row > .col-xs-12 {
+  display: flex;
+}
 
+/* Faz o card ocupar toda a altura da coluna */
+.features-section .features-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Faz o conteúdo interno crescer e empurra o botão pro fim */
+.features-section .features-icon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Garante que o botão fique alinhado ao final */
+.features-section .add-to-cart-btn,
+.features-section a[target="_blank"] {
+  margin-top: auto;
+}
