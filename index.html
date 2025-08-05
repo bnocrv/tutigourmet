@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <title>Tuti Gourmet</title>
+    <!--
+      Autor: Bruno dos Santos Carvalho
+      GitHub: https://github.com/bnocrv
+      Contato: bnocrv@proton.me
+      Criação: 30/07/2025
+      Última Atualização: 04/08/2025
+      Licença: MIT
+      Versão 1.0
+    -->
+
+    <!-- ARQUIVOS CSS EXTERNOS
+         - Bootstrap: grid e componentes prontos
+         - Font Awesome: ícones
+         - templatemo-lava.css: tema do site
+         - owl-carousel.css: estilos do carrossel de imagens -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+</head>
+
+<body>
+
+    <!-- PRÉ-CARREGADOR (EXIBIDO ENQUANTO A PÁGINA CARREGA) — INÍCIO -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- PRÉ-CARREGADOR — FIM -->
+
+
+    <!-- CABEÇALHO FIXO COM LOGO E MENU — INÍCIO -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- LOGO (CLICA E VOLTA PARA A HOME) -->
+                        <a href="index.html" class="logo" style="font-size: 22px;">
+                            TUTI GOURMET
+                        </a>
+                        <!-- MENU DE NAVEGAÇÃO (ÂNCORAS PARA SEÇÕES DA MESMA PÁGINA) -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#welcome" class="menu-item">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="menu-item">Cardápio</a></li>
+                            <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Quem Somos</a> </li>
+                            </li>
+                        </ul>
+                        <!-- BOTÃO/ICONE DO MENU PARA MOBILE (ABRE O MENU EM TELAS PEQUENAS) -->
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- MENU — FIM -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- CABEÇALHO — FIM -->
+
+    <!-- CAIXA DO CARRINHO FIXA NA TELA (VISUAL DO CARRINHO) -->
+    <div id="cart" style="
+        position: fixed;        /* Mantém o carrinho visível enquanto a página rola */
+        top: 70px;              /* Distância do topo da janela (ajuste para subir/descer) */
+        left: 20px;             /* Distância da borda esquerda */
+        width: 320px;           /* Largura da caixa do carrinho */
+        max-height: 400px;      /* Altura máxima antes de ativar rolagem interna */
+        background: white;      /* Cor do fundo do carrinho */
+        border: 1px solid #ccc; /* Bordinha para destacar */
+        border-radius: 8px;     /* Cantos arredondados */
+        padding: 10px;          /* Espaçamento interno */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra leve para profundidade */
+        display: none;          /* Começa escondido; o JS mostra quando necessário */
+        overflow: hidden;       /* Esconde conteúdo quando minimizar */
+        z-index: 9999;          /* Fica acima de outros elementos */
+        transition: max-height 0.25s ease, box-shadow 0.25s ease; /* Anima transições de abrir/fechar */
+    ">
+
+        <h4 id="cart-header" style="margin: 0 0 10px 0; cursor: default;">
+            <!-- TÍTULO DO CARRINHO (TAMPO/ALÇA). QUANDO MINIMIZADO, SERVE PARA EXPANDIR NO CLIQUE -->
+            Carrinho
+        </h4>
+
+        <!-- ÁREA COM ROLAGEM QUE ENVOLVE A LISTA DOS ITENS -->
+        <div id="cart-items-wrapper" style="overflow-y: auto; max-height: 290px;">
+            <!-- LISTA DE ITENS INSERIDOS NO CARRINHO (GERADA PELO JS) -->
+            <ul id="cart-items" style="list-style: none; padding: 0; margin: 0 0 10px 0;"></ul>
+        </div>
+
+        <!-- EXIBE O TOTAL EM REAIS (ATUALIZADO PELO JS) -->
+        <div id="cart-total" style="font-weight: bold; margin-bottom: 10px;"></div>
+
+        <!-- BOTÃO PARA FINALIZAR A COMPRA (ABRE O WHATSAPP COM O PEDIDO PRONTO) -->
+        <button id="finalize-btn" style="
+            width: 100%;                    /* Ocupa toda a largura do carrinho */
+            background-color: #000000;      /* Fundo preto para destacar */
+            color: white;                   /* Texto branco para contraste */
+            border: none;                   /* Sem borda padrão */
+            padding: 10px;                  /* Espaçamento interno confortável */
+            border-radius: 5px;             /* Cantinhos arredondados */
+            font-weight: bold;              /* Deixa o texto do botão mais forte */
+            cursor: pointer;                /* Muda o cursor para “mão” ao passar por cima */
+        ">
+            Finalizar Compra
+        </button>
+    </div>
+
+
+    <!-- BOTÃO FLUTUANTE (REDONDO) PARA ABRIR/FECHAR O CARRINHO -->
+    <button id="cart-toggle" style="
+        position: fixed;        /* Fica sempre visível durante a rolagem */
+        top: 20px;              /* Distância do topo */
+        left: 40px;             /* Distância da esquerda */
+        background-color: #000000; /* Fundo do botão */
+        color: white;           /* Cor do ícone 🛒 */
+        border: none;           /* Remove borda padrão */
+        border-radius: 50%;     /* Formato circular */
+        width: 50px;            /* Largura do botão */
+        height: 50px;           /* Altura do botão */
+        font-size: 18px;        /* Tamanho do ícone */
+        cursor: pointer;        /* Cursor de “mão” ao passar o mouse */
+        z-index: 10000;         /* Fica acima de quase tudo */
+    ">
+        🛒
+        <span id="cart-count" style="
+            background:#E56C8C;     /* Fundo da bolinha que mostra a quantidade */
+            color: white;            /* Cor do número dentro da bolinha */
+            border-radius: 50%;      /* Formato circular */
+            padding: 2px 6px;        /* Tamanho da bolinha */
+            font-size: 12px;         /* Tamanho do número */
+            position: absolute;      /* Posiciona relativo ao botão */
+            top: 0;                  /* Fica no topo do botão */
+            right: 0;                /* Encostado à direita do botão */
+            display: none;           /* Começa escondido; aparece se tiver itens */
+        ">
+            0
+        </span>
+    </button>
+
+
+
+
+
+    <!-- SEÇÃO DE BOAS-VINDAS (HERO) — INÍCIO -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- TEXTO PRINCIPAL DO TOPO DA PÁGINA (CHAMADA) -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1>Momentos doces começam <em>aqui!</em></h1>
+                        <p>Feitos com ingredientes selecionados e um toque de carinho, nossos doces são mais do que
+                            sobremesas — são experiências afetivas. Aqui, cada detalhe importa: das receitas artesanais
+                            ao cuidado na apresentação, tudo é pensado para despertar memórias e encantar os sentidos.
+                            Seja para celebrar um momento especial ou adoçar o seu dia, você sempre encontra um motivo
+                            para voltar. </p>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <!-- TEXTO PRINCIPAL — FIM -->
+        </div>
+        <!-- SEÇÃO DE BOAS-VINDAS — FIM -->
+
+        <!-- TÍTULO DA SEÇÃO DE CARDÁPIO (ESTILIZADO INLINE PARA ESTE PROJETO) -->
+        <h1 style="
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -1px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 0;
+    class="col-lg-8 offset-lg-2" style="margin-top: 0; padding-top: 0;
+  ">
+            Nosso <span style="color: #E56C8C; font-style: normal;">Cardápio</span>
+        </h1>
+
+
+     
+
+
+
+
+
+        <!-- SEÇÃO: LISTA DE PRODUTOS/ITENS (CARDÁPIO) — INÍCIO -->
+        <section class="section" id="about" style="margin-bottom: 0; padding-bottom: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-1.png" alt="">
+                                <h4>Bombom de Morango | Uva R$11</h4>
+                                <p>Pedaços de morango ou uva, uma camada de recheio cremoso de leite ninho, finalizada
+                                    com uma
+                                    deliciosa ganache de chocolate ao leite.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom de Morango | Uva"
+                                    data-price="11" data-id="1">
+                                    Adicionar ao carrinho
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-2.png" alt="">
+                                <h4>Escondidinho de Brownie R$10</h4>
+                                <p>Camadas de brownie molhadinho, creme de ninho, brigadeiro cremoso e finalizado com
+                                    confeito de chocolate nobre.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Escondidinho de Brownie"
+                                    data-price="10" data-id="2">
+                                    Adicionar ao carrinho
+                                </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-3.png" alt="">
+                                <h4>Morango do Amor R$15</h4>
+                                <p>Morango selecionado e graúdo envolvido por um delicioso e equilibrado brigadeiro de
+                                    ninho, finalizado em uma calda de açucar fininha e crocante.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Morango do Amor"
+                                    data-price="15" data-id="3">
+                                    Adicionar ao carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-4.png" alt="">
+                                <h4>Banoffe R$12</h4>
+                                <p>Uma deliciosa camada de biscoito assada, bananas, nosso saboroso recheio de doce de
+                                    leite, finalizado com a combinação de chantininho e canela.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Banoffe" data-price="12"
+                                    data-id="4">
+                                    Adicionar ao carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-5.png" alt="">
+                                <h4>Pavê Duplo de Ninho com Morango R$14</h4>
+                                <p>Camadas de mousse de ninho, recheio de leite, biscoito maizena e finalizado com
+                                    morangos
+                                    frescos.</p>
+                                <a href="#" class="add-to-cart-btn main-button"
+                                    data-name="Pavê Duplo de Ninho com Morango" data-price="14" data-id="5">
+                                    Adicionar ao carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/features-icon-6.png" alt="">
+                                <h4>Bombom Recheado | Trufa R$4</h4>
+                                <p>Bombom com casca de chocolate ao leite, opções de recheio disponível: Brigadeiro,
+                                    Ninho
+                                    com Geléia de Morango ou Ninho com Nutella.</p>
+                                <a href="#" class="add-to-cart-btn main-button" data-name="Bombom Recheado | Trufa"
+                                    data-price="4" data-id="6">
+                                    Adicionar ao carrinho
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/bolo-1.png" alt="">
+                                <h4>Bolo de Churros</h4>
+                                <p> Massa fofinha com um delicado toque de canela,
+                                    recheada com doce de leite cremoso e finalizada com uma cobertura levemente
+                                    açucarada. O
+                                    sabor do churros que você ama, agora em uma versão ainda mais irresistível.</p>
+                                <a href="https://wa.me/5521997847199?text=Olá! Quero encomendar o Bolo de Churros 😊"
+                                    target="_blank" style="
+           display: inline-block;
+           background-color: #E56C8C;
+           color: white;
+           padding: 10px 20px;
+           border-radius: 5px;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 10px;
+       ">
+                                    Consultar Disponibilidade
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/bolo-2.png" alt="">
+                                <h4>Crocante | Chocolatudo</h4>
+                                <p>Dois clássicos, uma imagem de puro sabor: o bolo de doce de leite com crocante de
+                                    amendoim brilha na frente, enquanto o chocolatudo rouba a cena ao fundo com sua
+                                    cobertura intensa. Um combo que conquista olhos e paladar.
+
+                                    Consultar Disponibilidade</p>
+                                <a href="https://wa.me/5521997847199?text=Olá! Quero encomendar o Bolo de Chocante | Chocolatudo 😊"
+                                    target="_blank" style="
+           display: inline-block;
+           background-color: #E56C8C;
+           color: white;
+           padding: 10px 20px;
+           border-radius: 5px;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 10px;
+       ">
+                                    Consultar Disponibilidade
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <h2></h2> <!-- ESPAÇO RESERVADO (PODERIA TER UM TÍTULO AO LADO DA IMAGEM) -->
+                                <img src="assets/images/bolo-3.png" alt="">
+                                <h4>Bolo de Limão</h4>
+                                <p>Nosso bolo de limão tem uma massa macia com um toque cítrico perfeito, recheio
+                                    cremoso e cobertura suave com raspas de limão fresco. Ideal para quem busca um doce
+                                    com sabor marcante e delicadeza no ponto certo.
+
+                                    Consultar Disponibilidade
+                                </p>
+                                <a href="https://wa.me/5521997847199?text=Olá! Quero encomendar o Bolo de Limão 😊"
+                                    target="_blank" style="
+           display: inline-block;
+           background-color: #E56C8C;
+           color: white;
+           padding: 10px 20px;
+           border-radius: 5px;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 10px;
+       ">
+                                    Consultar Disponibilidade
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- SEÇÃO DE PRODUTOS — FIM -->
+
+        <!-- ELEMENTOS DECORATIVOS DE FUNDO (DO TEMA) -->
+        <div class="left-image-decor"></div>
+        <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
+            data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+        </div>
+
+
+
+
+
+        <!-- FIM DO BLOCO DE RECURSOS/DESTAQUES -->
+
+        <div class="right-image-decor"></div>
+
+       <div class="left-image-decor-copia"></div>
+
+
+
+        <!-- SEÇÃO "QUEM SOMOS" — INÍCIO -->
+
+        <section class="section" id="testimonials" style="margin-top: 0; padding-top: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="center-heading">
+                            <h1 style="
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -1px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 0;
+">
+                                Quem <span style="color: #E56C8C; font-style: normal;">Somos</span>
+                            </h1>
+
+                            <img src="assets/images/foto-nossa-historia.png" alt="Foto da Nossa História"
+                                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+
+                            <p><br> Tudo começou com um sonho: o desejo de criar doces artesanais feitos com amor.
+                                Muito antes de se tornar realidade, esse sonho já fazia parte da minha vida.<br /><br />
+
+                                Me chamo <strong>Letícia Carvalho</strong>, e ao lado do meu esposo
+                                <strong>Romário</strong>, transformamos esse sonho em um projeto de vida:
+                                a <strong>Tuti Gourmet</strong>. Juntos, unimos paixão, dedicação e carinho em cada
+                                receita, sempre buscando oferecer o melhor para vocês.<br /><br />
+
+                                Mais do que uma confeitaria, a Tuti Gourmet é uma extensão do nosso lar —
+                                onde cada doce carrega uma história, um cuidado especial e o sabor único de algo feito
+                                com
+                                amor.<br /><br />
+
+                                Sejam bem-vindos à nossa doce jornada!
+                            </p>
+                        </div>
+                    </div>
+
+        </section>
+        <!-- SEÇÃO "QUEM SOMOS" — FIM -->
+
+
+        <!-- RODAPÉ COM REDES SOCIAIS E CRÉDITOS — INÍCIO -->
+
+        <footer id="contact-us">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <!-- ÁREA DE CONTATO VIA WHATSAPP (RESERVADA/OCULTA NO MOMENTO) -->
+
+                        <!-- FORMULÁRIO/CONTEÚDO DO LADO DIREITO DO RODAPÉ -->
+                        <div class="right-content col-lg-6 col-md-12 col-sm-12">
+                            <h2><em style="color: black;">Siga Nossas <em style="color: #ffffff;">Redes</em>
+                            </h2>
+
+                            <p>Siga-nos e embarque em uma jornada de sabores feitos com todo o carinho. Aqui, cada pedacinho carrega um toque de amor, preparado especialmente para você!
+                            </p>
+                            <ul class="social">
+
+                                <li><a href="https://www.instagram.com/tuti_gourmet?igsh=MTVud3JnMnc0MGh6Zw=="><i
+                                            class="fa fa-instagram"></i></a></li>
+
+                                <li><a href="https://www.facebook.com/share/1FzayPBFeu/
+                      "><i class="fa fa-facebook"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sub-footer">
+                            <p>Copyright &copy; 2025 Tuti Gourmet<br>
+
+                                Designed by <a rel="nofollow" href="https://github.com/bnocrv">Bruno Carvalho</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- RODAPÉ — FIM -->
+
+        <!-- SCRIPTS EXTERNOS (ORDEM IMPORTA)
+         - jQuery antes do Bootstrap
+         - Plugins do template
+         - custom.js para comportamentos do tema -->
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Plugins -->
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/imgfix.min.js"></script>
+
+        <!-- Inicialização global do template -->
+        <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const cartToggleBtn = document.getElementById('cart-toggle');
+    const cart = document.getElementById('cart');
+    const cartHeader = document.getElementById('cart-header');
+    const cartItemsWrapper = document.getElementById('cart-items-wrapper');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const finalizeBtn = document.getElementById('finalize-btn');
+    const cartCount = document.getElementById('cart-count');
+
+    let cartItems = {};
+    let isMinimized = false;
+    let lastScrollY = window.scrollY;
+    const MINIMIZE_THRESHOLD = 10;
+
+    function minimizeCart() {
+        if (Object.keys(cartItems).length === 0) return;
+
+        cart.style.transition = 'all 0.3s ease';
+        cart.style.maxHeight = '46px';
+        cart.style.width = '100px';
+        cart.style.overflow = 'hidden';
+
+        cartHeader.style.cursor = 'pointer';
+        cartHeader.style.fontSize = '14px';
+        cartHeader.style.padding = '8px 12px';
+        cartHeader.style.transition = 'all 0.3s ease';
+
+        cartHeader.style.display = 'flex';
+        cartHeader.style.alignItems = 'center';
+        cartHeader.style.justifyContent = 'center';
+        cartHeader.style.textAlign = 'center';
+        cartHeader.innerHTML = 'Carrinho';
+
+        isMinimized = true;
+    }
+
+    function expandCart() {
+        cart.style.transition = 'all 0.3s ease';
+        cart.style.maxHeight = '400px';
+        cart.style.width = '300px';
+        cart.style.overflow = 'auto';
+
+        cartHeader.style.cursor = 'default';
+        cartHeader.style.fontSize = '18px';
+        cartHeader.style.padding = '15px 20px';
+        cartHeader.style.transition = 'all 0.3s ease';
+
+        cartHeader.innerHTML = 'Carrinho';
+
+        isMinimized = false;
+    }
+
+    function showCart() {
+        cart.style.display = 'block';
+        expandCart();
+    }
+
+    function hideCart() {
+        cart.style.display = 'none';
+    }
+
+    cartToggleBtn.addEventListener('click', () => {
+        if (cart.style.display === 'none' || cart.style.display === '') {
+            showCart();
+        } else {
+            if (isMinimized) {
+                expandCart();
+            } else {
+                hideCart();
+            }
+        }
+    });
+
+    cartHeader.addEventListener('click', () => {
+        if (isMinimized) {
+            expandCart();
+        }
+    });
+
+    function updateCartUI() {
+        cartItemsContainer.innerHTML = '';
+
+        let total = 0;
+        let totalQuantity = 0;
+
+        for (const id in cartItems) {
+            const item = cartItems[id];
+            total += item.price * item.quantity;
+            totalQuantity += item.quantity;
+
+            const li = document.createElement('li');
+            li.style.marginBottom = '10px';
+            li.innerHTML = `
+                <div><strong>${item.name}</strong> - R$${item.price.toFixed(2)}</div>
+                <div>
+                    Quantidade:
+                    <input
+                        type="number"
+                        min="1"
+                        value="${item.quantity}"
+                        data-id="${id}"
+                        style="width: 50px;"
+                        aria-label="Quantidade de ${item.name}"
+                    />
+                    <button data-id="${id}" class="remove-item" style="margin-left:10px; color: #E56C8C; cursor:pointer;">X</button>
+                </div>
+            `;
+            cartItemsContainer.appendChild(li);
+        }
+
+        cartTotal.textContent = `Total: R$${total.toFixed(2)}`;
+        cartCount.textContent = totalQuantity;
+        cartCount.style.display = totalQuantity > 0 ? 'inline-block' : 'none';
+
+        if (totalQuantity === 0) {
+            hideCart();
+        }
+    }
+
+    function addToCart(id, name, price) {
+        if (cartItems[id]) {
+            cartItems[id].quantity++;
+        } else {
+            cartItems[id] = { name, price, quantity: 1 };
+        }
+        updateCartUI();
+        showCart();
+    }
+
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = button.dataset.id;
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+            addToCart(id, name, price);
+        });
+    });
+
+    // Atualiza a quantidade no objeto enquanto digita, sem redesenhar para evitar erro no celular
+    function handleQuantityInput(e) {
+        if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
+            const id = e.target.dataset.id;
+            let quantity = parseInt(e.target.value, 10);
+            if (isNaN(quantity) || quantity < 1) quantity = 1;
+            if (cartItems[id]) {
+                cartItems[id].quantity = quantity;
+                // NÃO chama updateCartUI aqui para evitar perda de foco
+            }
+        }
+    }
+
+    // Quando terminar a edição (change), atualiza a interface do carrinho
+    function handleQuantityChange(e) {
+        if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'number') {
+            updateCartUI();
+        }
+    }
+
+    cartItemsContainer.addEventListener('input', handleQuantityInput);
+    cartItemsContainer.addEventListener('change', handleQuantityChange);
+
+    cartItemsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('remove-item')) {
+            const id = e.target.dataset.id;
+            delete cartItems[id];
+            updateCartUI();
+        }
+    });
+
+    finalizeBtn.addEventListener('click', () => {
+        if (Object.keys(cartItems).length === 0) {
+            alert('Seu carrinho está vazio!');
+            return;
+        }
+
+        let message = 'Olá, gostaria de fazer o pedido:\n';
+        for (const id in cartItems) {
+            const item = cartItems[id];
+            message += `- ${item.name} x${item.quantity} = R$${(item.price * item.quantity).toFixed(2)}\n`;
+        }
+        const total = Object.values(cartItems).reduce((sum, item) => sum + item.price * item.quantity, 0);
+        message += `Total: R$${total.toFixed(2)}`;
+
+        const phoneNumber = '5521997847199';
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    });
+
+    window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastScrollY;
+
+        const cartVisible = cart.style.display === 'block';
+        const hasItems = Object.keys(cartItems).length > 0;
+
+        if (cartVisible && hasItems) {
+            if (Math.abs(delta) > MINIMIZE_THRESHOLD) {
+                minimizeCart();
+            }
+        }
+
+        lastScrollY = currentY;
+    });
+
+    updateCartUI();
+    cart.style.maxHeight = '400px';
+});
+</script>
