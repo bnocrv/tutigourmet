@@ -1,63 +1,64 @@
-https://tutigourmet.vercel.app/
+# 🍰 Tuti Gourmet
 
-![Print do Site](assets/images/print.png)
-
-> Site desenvolvido para a doceria **Tuti Gourmet**, com foco em uma experiência doce, moderna e totalmente responsiva.  
-> 💻 Feito com HTML, CSS, JavaScript puro e integração com WhatsApp.  
-
----
-
-## Funcionalidades
-
--  **Cardápio dinâmico** com produtos cadastrados via HTML;
--  **Carrinho flutuante inteligente**:
-- Abre/fecha com botão flutuante;
-  - Minimiza automaticamente ao rolar a página;
-  - Permite alterar quantidades diretamente no input;
-  - Atualiza o total em tempo real;
--  **Finalização do pedido via WhatsApp** com geração automática da mensagem formatada;
--  **Design moderno e acolhedor**, com foco em uma doceria artesanal;
--  **Responsivo** para dispositivos móveis;
--  Código totalmente comentado para facilitar o aprendizado e manutenção.
+[🔗 Acesse o site](https://tutigourmet.vercel.app)  
+> Segunda tentativa de criar um site para a doceria da minha irmã.  
+> A primeira versão foi importante para aprender, mas preferi recomeçar do zero e aplicar o que evoluí.  
+> 💻 Projeto feito com HTML, CSS e JavaScript puro, com integração ao WhatsApp e foco em responsividade.
 
 ---
 
-## Como usar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/bnocrv/tuti-gourmet.git
-   ```
-2. Abra o arquivo `index.html` no seu navegador.
-3. Navegue, adicione produtos ao carrinho e clique em **Finalizar Compra** para abrir o WhatsApp com o pedido pronto.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 ---
 
-## Estrutura de Pastas
+# 📋 Funcionalidades
 
-```
-📦 tuti-gourmet
-├── assets/
-│   ├── css/
-│   │   ├── bootstrap.css
-│   │   ├── font-awesome.css
-│   │   ├── owl-carousel.css
-│   │   └── style.css
-│   ├── images/
-│   │   ├── features-icon-*.png
-│   │   └── bolo-*.png
-│   └── js/
-│       ├── bootstrap.min.js
-│       ├── custom.js
-│       └── [outros plugins]
-├── index.html
-├── print.png
-└── README.md
-```
+- 🍽️ **Cardápio dinâmico** com produtos cadastrados via HTML  
+- 🛒 **Carrinho flutuante inteligente**:  
+  - Abre/fecha com botão flutuante  
+  - Minimiza automaticamente ao rolar a página  
+  - Permite alterar quantidades diretamente no input  
+  - Atualiza o total em tempo real  
+- 📲 **Finalização do pedido via WhatsApp**, com geração automática da mensagem formatada  
+- 🎨 **Design moderno e acolhedor**, focado em uma doceria artesanal  
+- 📱 **Responsivo** para dispositivos móveis e tablets  
+- 💡 Código totalmente comentado, ideal para estudo, manutenção e evolução futura  
 
 ---
 
-## Autor
+![Print do Site](assets/images.print.png)
+
+# 🗂️ Estrutura de Pastas
+
+- tuti-gourmet/
+- ├── assets/
+- │ ├── css/
+- │ │ ├── bootstrap.css
+- │ │ ├── font-awesome.css
+- │ │ ├── owl-carousel.css
+- │ │ └── style.css
+- │ ├── images/
+- │ │ ├── features-icon-.png
+- │ │ └── bolo-.png
+- │ └── js/
+- │ ├── bootstrap.min.js
+- │ ├── custom.js
+- │ └── [outros plugins]
+- ├── index.html
+- ├── print.png
+- └── README.md
+
+---
+
+# 👨‍💻 Sobre
+
+Esse projeto foi desenvolvido como parte dos meus estudos de ADS (na Afya) e JavaScript (Curso em Vídeo), com o objetivo de praticar lógica de programação, responsividade e integração com serviços externos.
+
+Foi minha **segunda tentativa de criar um site real para a doceria da minha irmã**. A primeira versão me ajudou a aprender bastante, mas preferi começar uma nova do zero, aplicando o que evoluí tecnicamente — principalmente em estrutura de código, design e usabilidade.
+
+---
+
+# 📫 Contato
 
 **Bruno dos Santos Carvalho**  
 📧 [bnocrv@proton.me](mailto:bnocrv@proton.me)  
@@ -65,11 +66,11 @@ https://tutigourmet.vercel.app/
 
 ---
 
-## Licença
+# 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT.  
-Sinta-se à vontade para utilizar, modificar e compartilhar com os devidos créditos.
+Sinta-se à vontade para usar, modificar e compartilhar — com os devidos créditos.
 
 ---
 
-**Tuti Gourmet** — Doces com amor. Momentos com sabor. 🍰
+**Tuti Gourmet** — *Doces com amor. Momentos com sabor.* 🍬
