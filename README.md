@@ -26,7 +26,7 @@
 
 ---
 
-![Print do Site](assets/images.print.png)
+![Print do Site](assets/images/print.png)
 
 # 🗂️ Estrutura de Pastas
 
