@@ -28,26 +28,6 @@
 
 ![Print do Site](assets/images/print.png)
 
-# 🗂️ Estrutura de Pastas
-
-- tuti-gourmet/
-- ├── assets/
-- │ ├── css/
-- │ │ ├── bootstrap.css
-- │ │ ├── font-awesome.css
-- │ │ ├── owl-carousel.css
-- │ │ └── style.css
-- │ ├── images/
-- │ │ ├── features-icon-.png
-- │ │ └── bolo-.png
-- │ └── js/
-- │ ├── bootstrap.min.js
-- │ ├── custom.js
-- │ └── [outros plugins]
-- ├── index.html
-- ├── print.png
-- └── README.md
-
 ---
 
 # 👨‍💻 Sobre
