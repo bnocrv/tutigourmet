@@ -1,4 +1,4 @@
-# 🍰 Tuti Gourmet
+# Tuti Gourmet
 
 [🔗 Acesse o site](https://tutigourmet.vercel.app)  
 > Segunda tentativa de criar um site para a doceria da minha irmã.  
@@ -11,7 +11,7 @@
 
 ---
 
-# 📋 Funcionalidades
+# Funcionalidades
 
 - 🍽️ **Cardápio dinâmico** com produtos cadastrados via HTML  
 - 🛒 **Carrinho flutuante inteligente**:  
@@ -26,13 +26,13 @@
 
 ---
 
-# 📷 Screenshot
+# Screenshot
 
 ![Print do Site](assets/images/print.png)
 
 ---
 
-# 👨‍💻 Sobre
+# Sobre
 
 Esse projeto foi desenvolvido como parte dos meus estudos de ADS (na Afya) e JavaScript (Curso em Vídeo), com o objetivo de praticar lógica de programação, responsividade e integração com serviços externos.
 
@@ -40,7 +40,7 @@ Foi minha **segunda tentativa de criar um site real para a doceria da minha irm�
 
 ---
 
-# 📫 Contato
+# Contato
 
 **Bruno dos Santos Carvalho**  
 📧 [bnocrv@proton.me](mailto:bnocrv@proton.me)  
@@ -48,7 +48,7 @@ Foi minha **segunda tentativa de criar um site real para a doceria da minha irm�
 
 ---
 
-# 📄 Licença
+# Licença
 
 Este projeto está licenciado sob a Licença MIT.  
 Sinta-se à vontade para usar, modificar e compartilhar — com os devidos créditos.
